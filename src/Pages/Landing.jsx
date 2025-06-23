@@ -7,4 +7,4 @@ export default function Landing(){
       Hello guthib
     </div>
   )
-}
+} 
