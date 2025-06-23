@@ -1,3 +1,8 @@
 @import "tailwindcss";
-
 @plugin "tailwindcss-motion";
+@plugin "daisyui" {
+  themes: all;
+}
+@utility flex-center{
+  @apply flex justify-center items-center
+}
