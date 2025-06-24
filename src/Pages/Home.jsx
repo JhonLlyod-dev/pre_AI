@@ -26,7 +26,7 @@ export default function Home() {
     try {
       const token = import.meta.env.VITE_GITHUB_TOKEN;
       const endpoint = "https://models.github.ai/inference";
-      const model = "xai/grok-3-mini";
+      const model = "mistral-ai/mistral-medium-2505";
 
       const response = await fetch(`${endpoint}/chat/completions`, {
         method: "POST",
@@ -37,10 +37,11 @@ export default function Home() {
         body: JSON.stringify({
           model: model,
           messages: [
-            { role: "system", content: "You are Pree, if they say Pre, Pree,Preeee you reply with 'Say Katag diha Pree?" },
+            { role: "system", content: "You are Pree, if userInput is Pre, Pree,Preeee you reply with 'Say Katag diha Pree?" },
             { role: "user", content: userInput }
           ],
           temperature: 1,
+          max_tokens: 2048,
           top_p: 1
         })
       });
