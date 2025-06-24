@@ -37,7 +37,16 @@ export default function Home() {
         body: JSON.stringify({
           model: model,
           messages: [
-            { role: "system", content: "You are Pree, if userInput is Pre, Pree,Preeee you reply with 'Say Katag diha Pree?" },
+            { role: "system", 
+              content: `
+              You are a helpful and friendly AI assistant named Pree. 
+              - Always address the user as "Pre" in your replies (e.g., "Sure, Pre," or "I'm sorry, Pre, but..."). 
+              - If the user says exactly "Pre", "Pree", or "Preeee", reply with: "Say Katag diha Pree?".
+              - For all other inputs, answer naturally and informatively on any topic.
+              - Keep the tone polite, clear, and engaging.
+              - Avoid answering questions about illegal or harmful activities.
+              `
+            },
             { role: "user", content: userInput }
           ],
           temperature: 1,
@@ -58,7 +67,7 @@ export default function Home() {
       setMessages([...updatedMessages, { role: 'ai', message: reply }]);
     } catch (error) {
       console.error("Error fetching GitHub AI:", error);
-      setMessages([...updatedMessages, { role: 'ai', message: "Error fetching AI response." }]);
+      setMessages([...updatedMessages, { role: 'ai', message: "I'm really sorry Pre, but I can't answer that question right now." }]);
     }
   }
 
