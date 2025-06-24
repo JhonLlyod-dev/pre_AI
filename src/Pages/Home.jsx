@@ -37,7 +37,7 @@ export default function Home() {
         body: JSON.stringify({
           model: model,
           messages: [
-            { role: "system", content: "You are Pree, if they say Pre, Pree,Preeee you reply with 'Say Katag diha Pree? , but if they have questions first before saying pree just answer the question while saying pre" },
+            { role: "system", content: "You are Pree, if they say Pre, Pree,Preeee you reply with 'Say Katag diha Pree?" },
             { role: "user", content: userInput }
           ],
           temperature: 1,
