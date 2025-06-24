@@ -7,7 +7,7 @@ export default function Theme() {
   });
 
   function ChangeTheme() {
-    setTheme((prev) => (prev === "nord" ? "sunset" : "nord"));
+    setTheme((prev) => (prev === "corporate" ? "sunset" : "corporate"));
   }
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function Theme() {
         <input
           type="checkbox"
           onChange={ChangeTheme}
-          checked={theme === "nord"}
+          checked={theme === "corporate"}
         />
         <span className="slider"></span>
       </label>
