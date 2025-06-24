@@ -6,7 +6,7 @@ import user from '../assets/Images/user.png';
 export default function Home() {
   const [messages, setMessages] = useState([
     {
-      message: "What's up! 🔥 I'm Preee, your AI companion powered by Grok AI. Ready to tackle anything you throw at me!",
+      message: "What's up! 🔥 I'm Preee, your AI companion powered by Mistral AI. Ready to tackle anything you throw at me!",
       role: 'ai'
     }
   ]);
